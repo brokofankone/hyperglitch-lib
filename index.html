@@ -4,19 +4,44 @@
   <meta charset="UTF-8">
   <title>Music Album Collection</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Music Album Collection</h1>
-  <div class="album">
-    <img src="thumbnail1.jpg" alt="Album 1" class="thumbnail">
-    <h2>Album 1</h2>
-    <p><a href="https://bandcamp.com/album1">Listen on Bandcamp</a></p>
-  </div>
-  <div class="album">
-    <img src="thumbnail2.jpg" alt="Album 2" class="thumbnail">
-    <h2>Album 2</h2>
-    <p><a href="https://bandcamp.com/album2">Listen on Bandcamp</a></p>
-  </div>
-  <!-- Add more albums as needed -->
+  <header>
+    <h1>Music Album Collection</h1>
+  </header>
+  
+  <nav>
+    <button id="sortArtist">Sort by Artist</button>
+    <button id="sortAlbum">Sort by Album</button>
+    <button id="sortYearAsc">Sort by Year Ascending</button>
+    <button id="sortYearDesc">Sort by Year Descending</button>
+  </nav>
+  
+  <main>
+    <div class="album card" data-artist="Woulg" data-album="Driftwood" data-year="2014">
+      <div class="card-image">
+        <img src="driftwood.jpg" alt="Driftwood">
+      </div>
+      <div class="card-content">
+        <span class="card-title">Woulg - Driftwood (2014)</span>
+        <p><a href="https://woulg.bandcamp.com/album/driftwood" class="btn">Listen on Bandcamp</a></p>
+      </div>
+    </div>
+
+    <div class="album card" data-artist="Woulg" data-album="Floating Longingly Towards The Sun" data-year="2017">
+      <div class="card-image">
+        <img src="floating.jpg" alt="Floating Longingly Towards The Sun">
+      </div>
+      <div class="card-content">
+        <span class="card-title">Woulg - Floating Longingly Towards The Sun (2017)</span>
+        <p><a href="https://woulg.bandcamp.com/album/floating-longingly-towards-the-sun" class="btn">Listen on Bandcamp</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2023 Music Album Collection</p>
+  </footer>
 </body>
 </html>
