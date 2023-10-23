@@ -57,7 +57,7 @@ main {
   border: 1px solid black;
   padding: 3px;
   margin: 5px;
-  width: 7%;
+  width: 15%;
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ main {
 .card h2 {
   font-size: 1em;
   margin: 5px 0;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 a {
