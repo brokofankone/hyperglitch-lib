@@ -2,46 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HYPERGLITCH LIBRARY</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Albums</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>A collection of hyperglitch albums</h1>
+    <h1>Music Albums</h1>
   </header>
-  
-  <nav>
-    <button id="sortArtist">Sort by Artist</button>
-    <button id="sortAlbum">Sort by Album</button>
-    <button id="sortYearAsc">Sort by Year Ascending</button>
-    <button id="sortYearDesc">Sort by Year Descending</button>
-  </nav>
-  
   <main>
-    <div class="album card" data-artist="Woulg" data-album="Driftwood" data-year="2014">
-      <div class="card-image">
-        <img src="https://f4.bcbits.com/img/a2739853504_10.jpg" alt="Driftwood">
-      </div>
-      <div class="card-content">
-        <span class="card-title">Woulg - Driftwood (2014)</span>
-        <p><a href="https://woulg.bandcamp.com/album/driftwood" class="btn">Listen on Bandcamp</a></p>
-      </div>
+    <div class="sort-buttons">
+      <button id="sortArtist" class="btn">Sort by Artist</button>
+      <button id="sortAlbum" class="btn">Sort by Album</button>
+      <button id="sortYearAsc" class="btn">Sort by Year (Asc)</button>
+      <button id="sortYearDesc" class="btn">Sort by Year (Desc)</button>
     </div>
-
+    <div class="album card" data-artist="Woulg" data-album="Driftwood" data-year="2016">
+      <img src="path/to/driftwood.jpg" alt="Driftwood Album Art" class="responsive-img">
+      <p>Woulg - Driftwood (2016)</p>
+    </div>
     <div class="album card" data-artist="Woulg" data-album="Floating Longingly Towards The Sun" data-year="2017">
-      <div class="card-image">
-        <img src="https://f4.bcbits.com/img/a2066069142_10.jpg" alt="Floating Longingly Towards The Sun">
-      </div>
-      <div class="card-content">
-        <span class="card-title">Woulg - Floating Longingly Towards The Sun (2017)</span>
-        <p><a href="https://woulg.bandcamp.com/album/floating-longingly-towards-the-sun" class="btn">Listen on Bandcamp</a></p>
-      </div>
+      <img src="path/to/floating.jpg" alt="Floating Longingly Towards The Sun Album Art" class="responsive-img">
+      <p>Woulg - Floating Longingly Towards The Sun (2017)</p>
     </div>
   </main>
-
-  <footer>
-    <p>© 2023 Music Album Collection</p>
-  </footer>
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
