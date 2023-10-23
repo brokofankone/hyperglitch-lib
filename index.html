@@ -3,34 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Albums</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Pixelify+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
+  <title>Online Music Library</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header>
-    <h1>Music Albums</h1>
+    <h1>ONLINE MUSIC LIBRARY</h1>
   </header>
-  <main>
-    <div class="sort-buttons">
-      <button id="sortArtist" class="btn">Sort by Artist</button>
-      <button id="sortAlbum" class="btn">Sort by Album</button>
-      <button id="sortYearAsc" class="btn">Sort by Year (Asc)</button>
-      <button id="sortYearDesc" class="btn">Sort by Year (Desc)</button>
-    </div>
-    <div class="album card" data-artist="Woulg" data-album="Driftwood" data-year="2016">
-      <img src="path/to/driftwood.jpg" alt="Driftwood Album Art" class="responsive-img">
-      <p>Woulg - Driftwood (2016)</p>
-    </div>
-    <div class="album card" data-artist="Woulg" data-album="Floating Longingly Towards The Sun" data-year="2017">
-      <img src="path/to/floating.jpg" alt="Floating Longingly Towards The Sun Album Art" class="responsive-img">
-      <p>Woulg - Floating Longingly Towards The Sun (2017)</p>
-    </div>
+  <nav>
+    <button id="artistName">ARTIST NAME</button>
+    <button id="releaseYear">RELEASE YEAR</button>
+  </nav>
+  <main id="library">
+    <!-- Cards will be added here by JavaScript -->
   </main>
-  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
-  <script src="scripts.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

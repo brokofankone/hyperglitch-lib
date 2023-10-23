@@ -1,41 +1,22 @@
-document.getElementById('sortArtist').addEventListener('click', function () {
-    sortAlbums('artist');
+const library = document.getElementById('library');
+
+const albums = [
+  { artist: 'Artist Name', title: 'Super Cool Album 1', year: 2010 },
+  { artist: 'Artist Name', title: 'Super Cool Album 2', year: 2015 },
+  // ... other albums
+];
+
+function renderLibrary() {
+  library.innerHTML = '';
+  albums.forEach(album => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <img src="https://f4.bcbits.com/img/a1770171322_10.jpg" alt="${album.title}">
+      <h2>${album.artist} - ${album.title} (${album.year})</h2>
+    `;
+    library.appendChild(card);
   });
-  document.getElementById('sortAlbum').addEventListener('click', function () {
-    sortAlbums('album');
-  });
-  document.getElementById('sortYearAsc').addEventListener('click', function () {
-    sortAlbums('yearAsc');
-  });
-  document.getElementById('sortYearDesc').addEventListener('click', function () {
-    sortAlbums('yearDesc');
-  });
-  
-  function sortAlbums(criteria) {
-    const albums = Array.from(document.querySelectorAll('.album'));
-    const sortedAlbums = albums.sort((a, b) => {
-      const artistA = a.dataset.artist.toLowerCase();
-      const artistB = b.dataset.artist.toLowerCase();
-      const albumA = a.dataset.album.toLowerCase();
-      const albumB = b.dataset.album.toLowerCase();
-      const yearA = parseInt(a.dataset.year);
-      const yearB = parseInt(b.dataset.year);
-  
-      switch (criteria) {
-        case 'artist':
-          return artistA.localeCompare(artistB);
-        case 'album':
-          return albumA.localeCompare(albumB);
-        case 'yearAsc':
-          return yearA - yearB;
-        case 'yearDesc':
-          return yearB - yearA;
-        default:
-          return 0;
-      }
-    });
-  
-    const main = document.querySelector('main');
-    sortedAlbums.forEach(album => main.appendChild(album));
-  }
-  
+}
+
+renderLibrary();
